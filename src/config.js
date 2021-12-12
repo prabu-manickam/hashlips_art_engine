@@ -5,7 +5,7 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
+const namePrefix = "Humble Dinosaurs";
 const description = "Remember to replace this description";
 const baseUri = "ipfs://NewUriToReplace";
 
@@ -24,20 +24,61 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 500,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Effect" },
+      { name: "Body" },
+      { name: "Neck Wear" },
+      { name: "Mouth Accessory" }
     ],
   },
+  {
+    growEditionSizeTo: 1000,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Effect" },
+      { name: "Body" },
+      { name: "Eye Wear" },
+      { name: "Neck Wear" },
+      { name: "Mouth Accessory" }
+    ],
+  },
+  {
+    growEditionSizeTo: 3000,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Effect" },
+      { name: "Body" },
+      { name: "Neck Wear" },
+      { name: "Head Wear" },
+      { name: "Mouth Accessory" }
+    ],
+  },
+  {
+    growEditionSizeTo: 3200,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Effect" },
+      { name: "Body" },
+      { name: "Feature" },
+      { name: "Mouth Accessory" }
+    ],
+  },
+  {
+    growEditionSizeTo: 3500,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Effect" },
+      { name: "Theme" },
+      { name: "Body" },
+      { name: "Head Wear" },
+      { name: "Mouth Accessory" }
+    ],
+  }
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
@@ -93,7 +134,7 @@ const preview = {
 
 const preview_gif = {
   numberOfImages: 5,
-  order: "ASC", // ASC, DESC, MIXED
+  order: "MIXED", // ASC, DESC, MIXED
   repeat: 0,
   quality: 100,
   delay: 500,
